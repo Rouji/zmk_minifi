@@ -36,23 +36,17 @@
 
     combos {
         compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <30 31>;
-            bindings = <&kp ESC>;
-        };
 
-        COMBO(combo_caps,  <10 19>, <&caps_word>)
+        COMBO(combo_caps,  <12 23>, <&caps_word>)
 
-        COMBO(combo_del,   <32 33>, <&kp DEL>)
-        COMBO(combo_lpar,  <12 13>, <&kp LPAR>)
-        COMBO(combo_rpar,  <16 17>, <&kp RPAR>)
-        COMBO(combo_lbkt,  <2  3 >, <&kp LBKT>)
-        COMBO(combo_rbkt,  <6  7 >, <&kp RBKT>)
-        COMBO(combo_lbrc,  <11 12>, <&kp LBRC>)
-        COMBO(combo_rbrc,  <17 18>, <&kp RBRC>)
-        COMBO(combo_lt,    <1  2 >, <&kp LT>)
-        COMBO(combo_gt,    <7  8 >, <&kp GT>)
+        COMBO(combo_lpar,  <15 16>, <&kp LPAR>)
+        COMBO(combo_rpar,  <19 20>, <&kp RPAR>)
+        COMBO(combo_lbkt,  <3  4 >, <&kp LBKT>)
+        COMBO(combo_rbkt,  <7  8 >, <&kp RBKT>)
+        COMBO(combo_lbrc,  <14 15>, <&kp LBRC>)
+        COMBO(combo_rbrc,  <20 21>, <&kp RBRC>)
+        COMBO(combo_lt,    <2  3 >, <&kp LT>)
+        COMBO(combo_gt,    <8  9 >, <&kp GT>)
     };
 
     keymap {
@@ -69,7 +63,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
 &kp A       &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH        &kp A
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-&kp A                                      &lt 3 ENTER &lt 2 SPACE     &lt 1 BSPC  &kp TAB        &kp A
+                                  &kp ESC  &lt 3 ENTER &lt 2 SPACE     &lt 1 BSPC  &kp TAB   &kp DEL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };

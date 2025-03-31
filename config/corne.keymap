@@ -10,7 +10,7 @@
 #define HRMR(k1,k2,k3,k4) &ht RALT k1  &ht RGUI k2  &ht RCTRL k3  &ht RSHFT k4
 
 // combo macro
-#define COMBO(name, pos, bind) name { timeout-ms = <20>; key-positions = pos ; bindings = bind ; };
+#define COMBO(name, pos, bind) name { timeout-ms = <50>; key-positions = pos ; bindings = bind ; };
 
 / {
     behaviors {
@@ -34,10 +34,10 @@
         };
     };
 
-//    combos {
-//        compatible = "zmk,combos";
+    combos {
+        compatible = "zmk,combos";
 //
-//        COMBO(combo_caps,  <12 23>, <&caps_word>)
+        COMBO(combo_caps,  <13 22>, <&caps_word>)
 //
 //        COMBO(combo_lpar,  <15 16>, <&kp LPAR>)
 //        COMBO(combo_rpar,  <19 20>, <&kp RPAR>)
@@ -47,7 +47,7 @@
 //        COMBO(combo_rbrc,  <20 21>, <&kp RBRC>)
 //        COMBO(combo_lt,    <2  3 >, <&kp LT>)
 //        COMBO(combo_gt,    <8  9 >, <&kp GT>)
-//    };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -64,7 +64,7 @@
 &kp A       &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH        &kp A
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   &kp ESC  &lt 3 ENTER &lt 2 SPACE     &lt 1 BSPC   &kp TAB  &kp DEL
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+        //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
 
@@ -78,9 +78,9 @@
 &kp A       &kp N1      &kp N2     &kp N3     &kp N4     &kp N5        &kp N6     &kp N7     &kp N8     &kp N9      &kp N0        &kp A
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ F11      │  F12     │  caps    │          │          │   │          │          │          │          │          │
-&kp A      &kp F11    &kp F12    &caps_word  &trans     &trans         &trans     &trans     &trans     &trans     &trans        &kp A
+&kp A      &kp F11    &kp F12    &trans      &trans     &trans         &trans     &trans     &trans     &trans     &trans        &kp A
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-&kp A                                        &trans     &kp ESC        &trans     &trans        &kp A
+&kp A                                        &trans     &trans         &trans     &trans        &kp A
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -113,7 +113,7 @@
 &kp A       &trans      &trans     &trans     &trans     &trans        &kp LARW   &kp DARW   &kp UARW   &kp RARW   &trans        &kp A
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │          │          │          │          │   │          │          │          │          │          │
-&kp A      &caps_word  &trans     &trans     &trans     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans        &kp A
+&kp A      &trans      &trans     &trans     &trans     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans        &kp A
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
 &kp A                                        &trans     &trans         &trans     &trans        &kp A
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
